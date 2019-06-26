@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Payroll Management</title>
+  <title>Job Hub</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -40,7 +40,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <![endif]-->
 
- {!! Charts::styles() !!} 
+ 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -57,7 +57,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Payroll
+        Job Hub
         <small> Dashboard</small>
       </h1>
       <ol class="breadcrumb">
@@ -90,7 +90,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-blue">
             <div class="inner">
-              <h3>{{DB::table('division')->count()}}</h3>
+              <h3>{{DB::table('jobs')->count()}}</h3>
 
               <p>Divisions</p>
             </div>
@@ -104,7 +104,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>{{DB::table('department')->count()}}</h3>
+              <h3>{{DB::table('appointment')->count()}}</h3>
 
               <p>Department</p>
             </div>
@@ -118,7 +118,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>{{DB::table('employees')->count()}}</h3>
+              <h3>{{DB::table('employeers')->count()}}</h3>
 
               <p>Officers</p>
             </div>
@@ -133,7 +133,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
            <div class="col-lg-3 col-xs-6">
              <div class="small-box bg-blue">
             <div class="inner">
-              <h3>{{DB::table('civilian')->count()}}</h3>
+              <h3>{{DB::table('schools')->count()}}</h3>
 
               <p>Civilian Employees</p>
             </div>
@@ -148,7 +148,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>{{DB::table('penalty')->count()}}</h3>
+              <h3>{{DB::table('graduate')->count()}}</h3>
 
               <p>Penalties</p>
             </div>
@@ -162,7 +162,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>{{DB::table('bank')->count()}}</h3>
+              <h3>{{DB::table('roles')->count()}}</h3>
 
               <p>Banks</p>
             </div>
@@ -176,7 +176,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-blue">
             <div class="inner">
-              <h3>{{DB::table('credit')->count()}}</h3>
+              <h3></h3>
 
               <p>Credits</p>
             </div>
@@ -190,7 +190,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <center>
 
-{!! $chart->html() !!}
+
 
 </center>
 
@@ -587,9 +587,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         + Math.round(series.percent) + "%</div>";
   }
 </script>
-{!! Charts::scripts() !!}
 
-{!! $chart->script() !!}
 
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.

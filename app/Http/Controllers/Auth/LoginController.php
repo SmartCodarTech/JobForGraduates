@@ -25,13 +25,21 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.
      *
      * @return void
+
      */
+     protected function hasTooManyLoginAttempts ($request) {
+        $maxLoginAttempts = 2;
+        $lockoutTime = 5; // 5 minutes
+        return $this->limiter()->tooManyAttempts(
+            $this->throttleKey($request), $maxLoginAttempts, $lockoutTime
+        );
+    }
     public function __construct()
     {
         $this->middleware('guest')->except('logout');

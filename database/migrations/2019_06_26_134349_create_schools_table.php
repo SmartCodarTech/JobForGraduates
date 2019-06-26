@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEmployeersTable extends Migration
+class CreateSchoolsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,19 @@ class CreateEmployeersTable extends Migration
      */
     public function up()
     {
-        Schema::create('employeers', function (Blueprint $table) {
+        Schema::create('schools', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('graduate_id')->unsigned();
             $table->string('name', 120);
             $table->string('country', 120);
             $table->string('town', 120);
-            
-            $table->string('organization_type', 120);// either financial company
-            $table->string('sector', 120); //private or government
-            $table->string('email', 120);
-            $table->string('phone', 120);
-            $table->string('address', 120);
+            $table->string('program', 60);
+            $table->string('certificate', 120);
+            $table->string('cert_number', 120);
+            $table->string('cert_file', 60);
+            $table->string('start_date', 120);
+            $table->string('end_date', 120);
+            $table->foreign('graduate_id')->references('id')->on('graduate');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -36,6 +38,6 @@ class CreateEmployeersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('employeers');
+        Schema::dropIfExists('schools');
     }
 }

@@ -15,7 +15,15 @@ class CreateAppointmentTable extends Migration
     {
         Schema::create('appointment', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('graduate_id')->unsigned();
+            $table->string('appoint_type', 120);
+            $table->string('appoint_description', 120);
+            $table->string('appoint_date', 120);
+            $table->foreign('graduate_id')->references('id')->on('graduate');
+
+
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

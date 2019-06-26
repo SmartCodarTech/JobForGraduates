@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Payroll Management</title>
+  <title>Job Seeker Portal</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -44,11 +44,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <body class="hold-transition login-page">
 <div class="login-box">
   
-  <center><img src="{{ asset("/bower_components/AdminLTE/dist/img/logo.png") }}" class="img-circle" width="80px" height="80px"></center>
+  <!--center><img src="{{ asset("/bower_components/AdminLTE/dist/img/logo.png") }}" class="img-circle" width="80px" height="80px"></center-->
   <div class="login-logo">
 
           
-    <a href="/"><b>Officers Payroll</b></a>
+    <a href="/"><b>Job Seekers Portal</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
