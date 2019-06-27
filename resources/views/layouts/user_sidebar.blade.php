@@ -32,21 +32,21 @@
       <ul class="sidebar-menu">
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-        <!--li><a href="{{ url('employee-management') }}"><i class="fa fa-fighter-jet"></i> <span>Officers Management</span></a></li-->
+        <li><a href="{{ url('graduate-management') }}"><i class="fa fa-info"></i> <span>User Information</span></a></li-->
         
          
         
         <li class="treeview">
-          <a href="{{ url('civilian-management') }}"><i class="fa fa-cog"></i> <span>User Information</span>
+          <a href="{{ url('graduate-management') }}"><i class="fa fa-cog"></i> <span>User Social Details</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ url('civilian-management') }}"><i class="fa fa-graduation-cap"></i>Education</a></li>
-            <li><a href="{{ url('system-management/allowance') }}"><i class="fa fa-wrench"></i>Skills</a></li>
-            <li><a href="{{ url('system-management/payroll') }}"><i class="fa fa-refresh"></i>Update Info</a></li>
-            <li><a href="{{ url('system-management/tax') }}"><i class="fa fa-book"></i>Book Appointment</a></li>
+            <li><a href="{{ url('system-management/education') }}"><i class="fa fa-graduation-cap"></i>Education</a></li>
+            <li><a href="{{ url('system-management/skills') }}"><i class="fa fa-wrench"></i>Skills</a></li>
+            
+            <li><a href="{{ url('system-management/appointment') }}"><i class="fa fa-book"></i>Book Appointment</a></li>
            
            
           </ul>

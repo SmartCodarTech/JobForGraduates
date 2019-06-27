@@ -27,7 +27,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    //protected $redirectTo = '/dashboard';
     protected function authenticated(Request $request, $user)
     {
     return $this->RedirectBasedInRole($request, $user);
