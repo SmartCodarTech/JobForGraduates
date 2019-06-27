@@ -15,6 +15,7 @@ class CreateGraduateTable extends Migration
     {
         Schema::create('graduate', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('user_id')->unsigned();
             $table->string('lastname', 60);
             $table->string('firstname', 60);
             $table->string('middlename', 60);
@@ -28,6 +29,7 @@ class CreateGraduateTable extends Migration
             $table->date('birthdate');
             $table->string('gender');
             $table->string('picture', 60);
+             $table->foreign('user_id')->references('id')->on('users');
             $table->softDeletes();
             $table->timestamps();
         });

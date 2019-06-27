@@ -18,7 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
-Route::get('/dashboard/{type}','ChartController@makeChart');
+Route::get('/user_dashboard', 'UserDashboardController@index');
+Route::get('/employeer_dashboard', 'EmployeersDashboardController@index');
+
 // Route::get('/system-management/{option}', 'SystemMgmtController@index');
 Route::get('/profile', 'ProfileController@index');
 

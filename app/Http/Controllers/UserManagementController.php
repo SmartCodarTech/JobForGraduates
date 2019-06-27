@@ -62,11 +62,13 @@ class UserManagementController extends Controller
             'email' => $request['email'],
             'password' => bcrypt($request['password']),
             'firstname' => $request['firstname'],
+            'role' => $request['role'],
             'lastname' => $request['lastname']
         ]);
 
 
-        return redirect()->intended('/user-management');
+        return redirect()->intended('/user-management')
+        ->with('success','User created successfully.');
     }
 
     /**
@@ -151,6 +153,7 @@ class UserManagementController extends Controller
             'username' => $request['username'],
             'firstname' => $request['firstname'],
             'lastname' => $request['lastname'],
+            'role' => $request['role'],
             'department' => $request['department']
             ];
 
@@ -177,6 +180,7 @@ class UserManagementController extends Controller
         'email' => 'required|email|max:255|unique:users',
         'password' => 'required|min:6|confirmed',
         'firstname' => 'required|max:60',
+        'role' => 'required|max:60',
         'lastname' => 'required|max:60'
     ]);
 

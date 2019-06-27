@@ -56,7 +56,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Payroll
+        Employeers
         <small> Dashboard</small>
       </h1>
       <ol class="breadcrumb">
@@ -66,190 +66,218 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </section>
 
     <!-- Main content -->
-    <section class="content">
-      <!-- Info boxes -->
+     <section class="content">
+
       <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="fa fa-envelope-o"></i></span>
 
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>{{DB::table('users')->count()}}</h3>
-
-              <p>Users</p>
+            <div class="info-box-content">
+              <span class="info-box-text">Messages</span>
+              <span class="info-box-number">1,410</span>
             </div>
-            <div class="icon">
-              <i class="fa fa-users"></i>
-            </div>
-            <a href="{{ route('user-management.index') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <!-- /.info-box-content -->
           </div>
+          <!-- /.info-box -->
         </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="fa fa-flag-o"></i></span>
 
-         <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-blue">
-            <div class="inner">
-              <h3>{{DB::table('division')->count()}}</h3>
-
-              <p>Divisions</p>
+            <div class="info-box-content">
+              <span class="info-box-text">Bookmarks</span>
+              <span class="info-box-number">410</span>
             </div>
-            <div class="icon">
-              <i class="fa fa-institution"></i>
-            </div>
-            <a href="{{ url('system-management/division') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <!-- /.info-box-content -->
           </div>
+          <!-- /.info-box -->
         </div>
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>{{DB::table('department')->count()}}</h3>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="fa fa-files-o"></i></span>
 
-              <p>Department</p>
+            <div class="info-box-content">
+              <span class="info-box-text">Uploads</span>
+              <span class="info-box-number">13,648</span>
             </div>
-            <div class="icon">
-              <i class="fa fa-barcode"></i>
-            </div>
-            <a href="{{ url('system-management/department') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <!-- /.info-box-content -->
           </div>
+          <!-- /.info-box -->
         </div>
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3>{{DB::table('employees')->count()}}</h3>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
 
-              <p>Officers</p>
+            <div class="info-box-content">
+              <span class="info-box-text">Likes</span>
+              <span class="info-box-number">93,139</span>
             </div>
-            <div class="icon">
-              <i class="fa fa-users"></i>
-            </div>
-            <a href="{{ url('employee-management') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <!-- /.info-box-content -->
           </div>
+          <!-- /.info-box -->
         </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="fa fa-envelope-o"></i></span>
 
-
-           <div class="col-lg-3 col-xs-6">
-             <div class="small-box bg-blue">
-            <div class="inner">
-              <h3>{{DB::table('civilian')->count()}}</h3>
-
-              <p>Civilian Employees</p>
+            <div class="info-box-content">
+              <span class="info-box-text">Messages</span>
+              <span class="info-box-number">1,410</span>
             </div>
-            <div class="icon">
-              <i class="fa fa-users"></i>
-            </div>
-            <a href="{{ url('civilian-management') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <!-- /.info-box-content -->
           </div>
+          <!-- /.info-box -->
         </div>
-      
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3>{{DB::table('penalty')->count()}}</h3>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="fa fa-flag-o"></i></span>
 
-              <p>Penalties</p>
+            <div class="info-box-content">
+              <span class="info-box-text">Bookmarks</span>
+              <span class="info-box-number">410</span>
             </div>
-            <div class="icon">
-              <i class="fa fa-gavel"></i>
-            </div>
-            <a href="{{ url('system-management/penalty') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <!-- /.info-box-content -->
           </div>
+          <!-- /.info-box -->
         </div>
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>{{DB::table('bank')->count()}}</h3>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="fa fa-files-o"></i></span>
 
-              <p>Banks</p>
+            <div class="info-box-content">
+              <span class="info-box-text">Uploads</span>
+              <span class="info-box-number">13,648</span>
             </div>
-            <div class="icon">
-              <i class="fa fa-bank"></i>
-            </div>
-            <a href="{{ url('system-management/bank') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <!-- /.info-box-content -->
           </div>
+          <!-- /.info-box -->
         </div>
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-blue">
-            <div class="inner">
-              <h3>{{DB::table('credit')->count()}}</h3>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
 
-              <p>Credits</p>
+            <div class="info-box-content">
+              <span class="info-box-text">Likes</span>
+              <span class="info-box-number">93,139</span>
             </div>
-            <div class="icon">
-              <i class="fa fa-money"></i>
-            </div>
-            <a href="{{ url('system-management/credit') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <!-- /.info-box-content -->
           </div>
+          <!-- /.info-box -->
         </div>
-        <div class="app">
-
-<center>
-
-
-
-</center>
-
-</div>
-
-        <div class="row">
-        <div class="col-md-6">
-          <div class="box box-solid">
-            <div class="box-header with-border">
-              <h2 class="box-title"><b>Millitary Statistics</b></h2>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <p><h4>Army</h4></p>
-
-              <div class="progress active">
-                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                  <span class="sr-only">40% Complete (success)</span>
-                </div>
-              </div>
-               <p><h4>Air Force</h4></p>
-              <div class="progress active">
-                <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                  <span class="sr-only">40% Complete (success)</span>
-                </div>
-              </div>
-               <p><h4>Navy</h4></p>
-              <div class="progress active">
-                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                  <span class="sr-only">40% Complete (success)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-            
-            <!-- /.box-body -->
-          
-          
-          <div class="col-md-6">
-          <div class="box box-solid">
-            <div class="box-header with-border">
-              <h2 class="box-title"><b>Civilians Statistics</b></h2>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <p><h4>Senior Employees</h4></p>
-
-              <div class="progress active">
-                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                  <span class="sr-only">40% Complete (success)</span>
-                </div>
-              </div>
-               <p><h4>Junior Employees</b></h4></p>
-              <div class="progress active">
-                <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                  <span class="sr-only">40% Complete (success)</span>
-                </div>
-              </div>
+        <!-- /.col -->
+      </div>
+      <div class="box-body">
+      <div class="row">
+        <div class="col-sm-6"></div>
+        <div class="col-sm-6"></div>
+      </div>
+      <form method="POST" action="{{ route('employee-management.search') }}">
+         {{ csrf_field() }}
+         @component('layouts.search', ['title' => 'Search'])
+          @component('layouts.two-cols-search-row', ['items' => ['First Name', 'Department_Name'], 
+          'oldVals' => [isset($searchingVals) ? $searchingVals['firstname'] : '', isset($searchingVals) ? $searchingVals['department_name'] : '']])
+          @endcomponent
+        @endcomponent
+      </form>
+    <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+      <div class="row">
+        <div class="col-sm-14">
+          <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+            <thead>
+              <tr role="row">
+                <th width="5%" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Picture: activate to sort column descending" aria-sort="ascending">Picture</th>
+                <th width="10%" class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" aria-sort="ascending">Employee Name</th>
+                <th width="12%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending">Email</th>
                
+                <th width="8%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Birthdate: activate to sort column ascending">Office</th>
+                  
+                <th width="8%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="HiredDate: activate to sort column ascending">Hired Date</th>
+                <th width="8%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending">Department</th>
+                <th width="8%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Division: activate to sort column ascending">Division</th>
+                <th width="8%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Division: activate to sort column ascending">ID</th>
+                 <th width="8%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Division: activate to sort column ascending">Salary(GHC)</th>
+                <th tabindex="0" aria-controls="example2" rowspan="1" colspan="2" aria-label="Action: activate to sort column ascending">Action</th>
+               
+               
+              </tr>
+            </thead>
+            <tbody>
+           
+                <tr role="row" class="odd">
+                  <td><img src="" width="50px" height="50px"/></td>
+                  <td class="sorting_1"></td>
+                  <td class="hidden-xs"></td>
+                  
+                  <td class="hidden-xs"></td>
+                    
+                  <td class="hidden-xs"></td>
+                  <td class="hidden-xs"></td>
+                  <td class="hidden-xs"></td>
+                  <td class="hidden-xs"></td>
+                  <td class="hidden-xs"></td>
+                  <td>
+                    <form class="row" method="POST" action="" onsubmit = "return confirm('Are you sure?')">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <a href="" class="btn btn-success col-sm-3 col-xs-5 btn-margin">
+                        Review
+                        </a>
+                         <button type="submit" class="btn btn-info col-sm-3 col-xs-5 btn-margin">
+                          Accepts
+                        </button>
+                    </form>
+                  </td>
+              </tr>
+          
+            </tbody>
+            <tfoot>
+              <tr role="row">
+                <th width="5%" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Picture: activate to sort column descending" aria-sort="ascending">Picture</th>
+                <th width="10%" class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" aria-sort="ascending">Employee Name</th>
+                <th width="12%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending">Email</th>
+               
+                <th width="8%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Birthdate: activate to sort column ascending">Office</th>
+                  
+                <th width="8%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="HiredDate: activate to sort column ascending">Hired Date</th>
+                <th width="8%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending">Department</th>
+                <th width="8%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Division: activate to sort column ascending">Division</th>
+                <th width="8%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Division: activate to sort column ascending">ID</th>
+                 <th width="8%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Division: activate to sort column ascending">Salary(GHC)</th>
+                <th tabindex="0" aria-controls="example2" rowspan="1" colspan="2" aria-label="Action: activate to sort column ascending">Action</th>
+              </tr>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">Showing 1 to of  entries</div>
+        </div>
+        <div class="col-sm-7">
+          <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <!-- /.box-body -->
+</div>
+    </section>
+    <!-- /.content -->
+  </div>
+
+       
+
+       
             </div>
           </div>
         </div>
@@ -586,9 +614,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         + Math.round(series.percent) + "%</div>";
   }
 </script>
-{!! Charts::scripts() !!}
 
-{!! $chart->script() !!}
 
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.

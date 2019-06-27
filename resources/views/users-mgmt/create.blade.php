@@ -7,6 +7,27 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Add new user</div>
                 <div class="panel-body">
+                     @if ($message = Session::get('success'))
+
+                        <div class="alert alert-success alert-block">
+
+                      <button type="button" class="close" data-dismiss="alert">×</button> 
+
+                           <strong>{{ $message }}</strong>
+
+                          </div>
+
+                            @endif
+                            @if ($message = Session::get('error'))
+
+                           <div class="alert alert-danger alert-block">
+
+                            <button type="button" class="close" data-dismiss="alert">×</button> 
+
+                             <strong>{{ $message }}</strong>
+
+                              </div>
+                         @endif
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('user-management.store') }}">
                         {{ csrf_field() }}
 
@@ -76,12 +97,29 @@
                                 @endif
                             </div>
                         </div>
+                         
 
                         <div class="form-group">
                             <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Role</label>
+                            <div class="col-md-6">
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <select type="text"  name="role" class="form-control pull-right" id="gender" required>
+                                        <option value="none">Select Role</option>
+                                        <option value="admin">Administrator</option>
+                                        <option value="user">User</option>
+                                    </select>
+
+                                </div>
                             </div>
                         </div>
 

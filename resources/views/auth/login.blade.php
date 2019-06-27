@@ -41,8 +41,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <![endif]-->
   
 </head>
+
 <body class="hold-transition login-page">
 <div class="login-box">
+  @if ($message = Session::get('success'))
+
+    <div class="alert alert-success alert-block">
+
+    <button type="button" class="close" data-dismiss="alert">×</button> 
+
+        <strong>{{ $message }}</strong>
+
+   </div>
+
+@endif
   
   <!--center><img src="{{ asset("/bower_components/AdminLTE/dist/img/logo.png") }}" class="img-circle" width="80px" height="80px"></center-->
   <div class="login-logo">

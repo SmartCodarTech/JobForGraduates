@@ -65,6 +65,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <li class="active">Dashboard</li>
       </ol>
     </section>
+    @if ($message = Session::get('success'))
+
+    <div class="alert alert-success alert-block">
+
+    <button type="button" class="close" data-dismiss="alert">×</button> 
+
+        <strong>{{ $message }}</strong>
+
+   </div>
+
+@endif
 
     <!-- Main content -->
     <section class="content">
