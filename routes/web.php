@@ -13,13 +13,30 @@
 
 Route::get('/', function () {
     return view('dashboard');
-})->middleware('auth');
+ 
+})->middleware(['auth','admin']);
+
 
 Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index');
-Route::get('/user_dashboard', 'UserDashboardController@index');
-Route::get('/employeer_dashboard', 'EmployeersDashboardController@index');
+
+Route::get('/', function () {
+    return view('user_dashboard');
+  
+})->middleware(['auth','user']);
+
+
+Route::get('/', function () {
+    return view('employeer_dashboard');
+  
+})->middleware(['auth','employeer']);
+
+
+//Auth::routes();
+
+     Route::get('/dashboard', 'DashboardController@index');
+     Route::get('/user_dashboard'     , 'UserDashboardController@index');
+     Route::get('/employeer_dashboard', 'EmployeersDashboardController@index');
 
 // Route::get('/system-management/{option}', 'SystemMgmtController@index');
 Route::get('/profile', 'ProfileController@index');
@@ -30,7 +47,7 @@ Route::post('user-management/search', 'UserManagementController@search')->name('
 Route::resource('user-management', 'UserManagementController');
 
 Route::resource('employeer-management', 'EmployeersController');
-Route::post('employee-management/search', 'EmployeersController@search')->name('employeer-management.search');
+Route::post('employeer-management/search', 'EmployeersController@search')->name('employeer-management.search');
 
 Route::post('mail-management/search', 'SendEmailController@search')->name('mail-management.search');
 Route::get('mail-management','SendMailController@sendMail');
@@ -41,7 +58,7 @@ Route::resource('graduate-management', 'GraduateController');
 Route::post('graduate-management/search', 'GraduateController@search')->name('graduate-management.search');
 
 Route::resource('system-management/employeer', 'EmployeerController');
-Route::post('system-management/employeer/search', 'EmployeerController@search')->name('employeer.search');
+Route::post('system-management/employeer/search', 'EmployeersController@search')->name('employeer.search');
 
 Route::resource('system-management/graduate', 'GraduateController');
 Route::post('system-management/graduate/search', 'GraduateController@search')->name('graduate.search');
@@ -55,11 +72,17 @@ Route::post('system-management/skills/search', 'SkillsController@search')->name(
 Route::resource('system-management/jobs', 'JobsController');
 Route::post('system-management/jobs/search', 'JobsController@search')->name('jobs.search');
 
-Route::resource('system-management/division', 'DivisionController');
-Route::post('system-management/division/search', 'DivisionController@search')->name('division.search');
+Route::resource('system-management/category', 'AddcategoryController');
+Route::post('system-management/category/search', 'AddCategoryController@search')->name('category.search');
 
-Route::resource('system-management/deduction', 'DeductionsController');
-Route::post('system-management/deduction/search', 'DeductionsController@search')->name('deduction.search');
+Route::resource('system-management/course', 'AddCoursesController');
+Route::post('system-management/course/search', 'AddCoursesController@search')->name('course.search');
+
+Route::resource('system-management/country', 'AddCountryController');
+Route::post('system-management/country/search', 'AddCountryController@search')->name('country.search');
+
+Route::resource('system-management/schools', 'AddSchoolsController');
+Route::post('system-management/schools/search', 'AddSchoolsController@search')->name('schools.search');
 
 Route::resource('system-management/salary', 'EmployeeSalaryController');
 Route::post('system-management/salary/search', 'EmployeeSalaryController@search')->name('salary.search');

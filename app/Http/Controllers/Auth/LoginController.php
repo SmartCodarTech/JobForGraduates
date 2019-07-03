@@ -1,10 +1,12 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Http\Traits\RedirectTrait;
+
 
 class LoginController extends Controller
 {
@@ -26,11 +28,14 @@ class LoginController extends Controller
      * Where to redirect users after login.
      *
      * @var string
-     */
-    //protected $redirectTo = '/dashboard';
+     *
+
+    protected $redirectTo = '/dashboard';
+    protected $redirectTo = '/user_dashboard';
+    protected $redirectTo = '/employeer_dashboard';**/
     protected function authenticated(Request $request, $user)
     {
-    return $this->RedirectBasedInRole($request, $user);
+           return $this->RedirectBasedInRole($request, $user);
     }
 
     /**

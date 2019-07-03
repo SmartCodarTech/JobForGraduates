@@ -178,7 +178,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="col-sm-6"></div>
         <div class="col-sm-6"></div>
       </div>
-      <form method="POST" action="{{ route('employee-management.search') }}">
+      <form method="POST" action="{{ route('employeer-management.search') }}">
          {{ csrf_field() }}
          @component('layouts.search', ['title' => 'Search'])
           @component('layouts.two-cols-search-row', ['items' => ['First Name', 'Department_Name'], 

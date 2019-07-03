@@ -44,8 +44,10 @@
           <ul class="treeview-menu">
             <li><a href="{{ url('system-management/employeer') }}"><i class="fa fa-suitcase"></i>Employeers</a></li>
             <li><a href="{{ url('system-management/graduate') }}"><i class="fa fa-users"></i>Job Seekers</a></li>
-            <li><a href="{{ url('system-management/education') }}"><i class="fa fa-graduation-cap"></i>Educations</a></li> <!--country-->
-            <li><a href="{{ url('system-management/salary') }}"><i class="fa fa-wrench"></i>Skills</a></li> <!--country-->
+            <li><a href="{{ url('system-management/country') }}"><i class="fa fa-flag-o"></i>Countries</a></li>
+            <li><a href="{{ url('system-management/category') }}"><i class="fa fa-book"></i>Categories courses</a></li> <!--country--> <!--country-->
+            <li><a href="{{ url('system-management/course') }}"><i class="fa fa-book"></i>Courses</a></li> <!--country-->
+            <li><a href="{{ url('system-management/schools') }}"><i class="fa fa-graduation-cap"></i>schools</a></li> <!--country-->
             
           </ul>
         </li>

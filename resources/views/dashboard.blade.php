@@ -101,7 +101,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-blue">
             <div class="inner">
-              <h3>{{DB::table('jobs')->count()}}</h3>
+              <h3>{{DB::table('users')->count()}}</h3>
 
               <p>Divisions</p>
             </div>
@@ -115,28 +115,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>{{DB::table('appointment')->count()}}</h3>
+              <h3>{{DB::table('add_country')->count()}}</h3>
 
-              <p>Department</p>
+              <p>Countries</p>
             </div>
             <div class="icon">
-              <i class="fa fa-barcode"></i>
+              <i class="fa fa-flag"></i>
             </div>
-            <a href="{{ url('system-management/department') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ url('system-management/country') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>{{DB::table('employeers')->count()}}</h3>
+              <h3>{{DB::table('add_course')->count()}}</h3>
 
-              <p>Officers</p>
+              <p>Courses</p>
             </div>
             <div class="icon">
-              <i class="fa fa-users"></i>
+              <i class="fa fa-book"></i>
             </div>
-            <a href="{{ url('employee-management') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ url('system-management/course') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 
@@ -144,14 +144,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
            <div class="col-lg-3 col-xs-6">
              <div class="small-box bg-blue">
             <div class="inner">
-              <h3>{{DB::table('schools')->count()}}</h3>
+              <h3>{{DB::table('add_shool')->count()}}</h3>
 
-              <p>Civilian Employees</p>
+              <p>Schools</p>
             </div>
             <div class="icon">
-              <i class="fa fa-users"></i>
+              <i class="fa fa-institution"></i>
             </div>
-            <a href="{{ url('civilian-management') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ url('system-management/schools') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
       
@@ -159,7 +159,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>{{DB::table('graduate')->count()}}</h3>
+              <h3>{{DB::table('users')->count()}}</h3>
 
               <p>Penalties</p>
             </div>
@@ -173,7 +173,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>{{DB::table('roles')->count()}}</h3>
+              <h3>{{DB::table('users')->count()}}</h3>
 
               <p>Banks</p>
             </div>

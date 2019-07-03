@@ -14,7 +14,7 @@ class UserTableSeeder extends Seeder
     public function run()
     {
     
-       // User::truncate();
+       User::truncate();
 
         $adminRole = Role::where('name','admin')->first();
         $employeerRole = Role::where('name','employeer')->first();
@@ -26,6 +26,7 @@ class UserTableSeeder extends Seeder
         	'email'=>'wisdomkukah@hotmail.com',
         	'firstname'=>'Wisdom',
         	'lastname'=>'Nanayaw',
+            'role'=>'admin',
         	'password'=>bcrypt('policeman')
         ]);
 
@@ -35,6 +36,7 @@ class UserTableSeeder extends Seeder
         	'email'=>'chrisadahene@gmail.com',
         	'firstname'=>'Chris',
         	'lastname'=>'Adahene',
+             'role'=>'employeer',
         	'password'=>bcrypt('policeman')
         ]);
 
@@ -44,6 +46,7 @@ class UserTableSeeder extends Seeder
         	'email'=>'saintman@gmail.com',
         	'firstname'=>'Sainty',
         	'lastname'=>'Godwin',
+             'role'=>'user',
         	'password'=>bcrypt('policeman')
         ]);
 
