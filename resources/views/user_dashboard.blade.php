@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -7,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Job Hub Portal</title>
+  <title>Job Portal</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -49,6 +50,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   @include('layouts.header')
   <!-- Sidebar -->
   @include('layouts.user_sidebar')
+ 
    <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -59,6 +61,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>
+         {{ csrf_field() }}
       </ol>
     </section>
   <!-- Left side column. contains the logo and sidebar -->
@@ -70,9 +73,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Profile Image -->
           <div class="box box-primary">
             <div class="box-body box-profile">
-              <img class="profile-user-img img-responsive img-circle" src="../../dist/img/user4-128x128.jpg" alt="User profile picture">
+                
+              <img class="profile -user-img img-responsive img-circle" src="" alt="User profile picture">
 
-              <h3 class="profile-username text-center">Nina Mcintire</h3>
+              <h3 class="profile-username text-center"></h3>
+                
 
               <p class="text-muted text-center">Software Engineer</p>
 
@@ -623,6 +628,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
+
 <!-- ./wrapper -->
 
 <!-- REQUIRED JS SCRIPTS -->
@@ -939,4 +945,5 @@ scratch. This page gets rid of all links and provides the needed markup only.
      fixed layout. -->
 </body>
 </html>
+
 

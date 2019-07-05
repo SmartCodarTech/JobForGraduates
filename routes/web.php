@@ -27,9 +27,9 @@ Route::get('/', function () {
 
 
 Route::get('/', function () {
-    return view('employeer_dashboard');
+    return view('user_dashboard');
   
-})->middleware(['auth','employeer']);
+})->middleware(['auth','user']);
 
 
 //Auth::routes();
@@ -43,6 +43,7 @@ Route::get('/profile', 'ProfileController@index');
 
 
 
+     Route::resource('/user_dashboard', 'UserDashboardController@user_dashboard');
 Route::post('user-management/search', 'UserManagementController@search')->name('user-management.search');
 Route::resource('user-management', 'UserManagementController');
 
@@ -61,6 +62,7 @@ Route::resource('system-management/employeer', 'EmployeerController');
 Route::post('system-management/employeer/search', 'EmployeersController@search')->name('employeer.search');
 
 Route::resource('system-management/graduate', 'GraduateController');
+//Route::('/user_dashboard', 'GraduateController');
 Route::post('system-management/graduate/search', 'GraduateController@search')->name('graduate.search');
 
 Route::resource('system-management/education', 'EdducationController');

@@ -22,7 +22,7 @@
       <form method="POST" action="{{ route('schools.search') }}">
          {{ csrf_field() }}
          @component('layouts.search', ['School' => 'Search'])
-          @component('layouts.two-cols-search-row', ['items' => ['Tax'], 
+          @component('layouts.two-cols-search-row', ['items' => ['Name'], 
           'oldVals' => [isset($searchingVals) ? $searchingVals['name'] : 'type']])
           @endcomponent
         @endcomponent
@@ -37,7 +37,7 @@
                 <th width="20%" class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="division: activate to sort column ascending">Institutions Type</th>
                 <th width="20%" class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="division: activate to sort column ascending">Location</th>
                 
-                <th tabindex="0" aria-controls="example2" rowspan="1" colspan="2" aria-label="Action: activate to sort column ascending">Action</th>
+                <th tabindex="0" aria-controls="example2" rowspan="4" colspan="0" aria-label="Action: activate to sort column ascending">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -48,13 +48,15 @@
                   <td>{{ $school->location }}</td>
                   
                   <td>
-                    <form class="row" method="POST" action="{{ route('schools.destroy', ['id' => $schools->id]) }}" onsubmit = "return confirm('Are you sure?')">
+                    <form class="row" method="POST" action="{{ route('schools.destroy', ['id' => $school->id]) }}" onsubmit = "return confirm('Are you sure?')">
                         <input type="hidden" name="_method" value="DELETE">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <a href="{{ route('schools.edit', ['id' => $schools->id]) }}" class="btn btn-success col-sm-3 col-xs-5 btn-margin">
+                        <a href="{{ route('schools.edit', ['id' => $school->id]) }}" class="btn btn-success col-sm-2 col-xs-2 btn-margin">
                         Update
                         </a>
-                        <button type="submit" class="btn btn-danger col-sm-3 col-xs-5 btn-margin">
+                        
+
+                        <button type="submit" class="btn btn-danger col-sm-2 col-xs-2 btn-margin">
                           Delete
                         </button>
                     </form>
@@ -68,7 +70,7 @@
                  <th width="20%" class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="division: activate to sort column ascending">Institutions Type</th>
                 <th width="20%" class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="division: activate to sort column ascending">Location</th>
                
-                <th tabindex="0" aria-controls="example2" rowspan="1" colspan="2" aria-label="Action: activate to sort column ascending">Action</th>
+                <th tabindex="0" aria-controls="example2" rowspan="4" colspan="0" aria-label="Action: activate to sort column ascending">Action</th>
               </tr>            </tfoot>
           </table>
         </div>

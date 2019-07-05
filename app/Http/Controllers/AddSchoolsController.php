@@ -98,12 +98,12 @@ class AddSchoolsController extends Controller
         $schools = AddSchools::findOrFail($id);
         $input = [
             'name' => $request['name'],
-              'typr' => $request['type'],
+              'type' => $request['type'],
             'location' => $request['location']
         ];
         $this->validate($request, [
-        'name' => 'required|max:60'
-        'type' => 'required|max:60'
+        'name' => 'required|max:60',
+        'type' => 'required|max:60',
         'location' => 'required|max:60'
         ]);
         AddSchools::where('id', $id)

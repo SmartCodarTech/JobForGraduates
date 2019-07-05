@@ -101,14 +101,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-blue">
             <div class="inner">
-              <h3>{{DB::table('users')->count()}}</h3>
+              <h3>{{DB::table('employeers')->count()}}</h3>
 
-              <p>Divisions</p>
+              <p>Employers</p>
             </div>
             <div class="icon">
               <i class="fa fa-institution"></i>
             </div>
-            <a href="{{ url('system-management/division') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ url('system-management/empolyers') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-xs-6">
@@ -159,12 +159,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>{{DB::table('users')->count()}}</h3>
+              <h3>{{DB::table('addcategory')->count()}}</h3>
 
-              <p>Penalties</p>
+              <p>Category of Courses</p>
             </div>
             <div class="icon">
-              <i class="fa fa-gavel"></i>
+              <i class="fa fa-list"></i>
             </div>
             <a href="{{ url('system-management/penalty') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -173,30 +173,38 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>{{DB::table('users')->count()}}</h3>
+              <h3>{{DB::table('graduate')->count()}}</h3>
 
-              <p>Banks</p>
+              <p>Graduates </p>
             </div>
             <div class="icon">
-              <i class="fa fa-bank"></i>
+              <i class="fa fa-graduation-cap"></i>
             </div>
             <a href="{{ url('system-management/bank') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-blue">
-            <div class="inner">
-              <h3></h3>
 
-              <p>Credits</p>
+
+         <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3>{{DB::table('jobs')->count()}}</h3>
+
+              <p>Vacancy&Jobs</p>
             </div>
             <div class="icon">
-              <i class="fa fa-money"></i>
+              <i class="fa fa-laptop"></i>
             </div>
-            <a href="{{ url('system-management/credit') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ url('system-management/bank') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
+</div>
+
+
+
+
+       
         <div class="app">
 
 <center>
@@ -211,24 +219,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="col-md-6">
           <div class="box box-solid">
             <div class="box-header with-border">
-              <h2 class="box-title"><b>Millitary Statistics</b></h2>
+              <h2 class="box-title"><b>Graduates Statistics</b></h2>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <p><h4>Army</h4></p>
+              <p><h4>Employeed</h4></p>
 
               <div class="progress active">
                 <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
                   <span class="sr-only">40% Complete (success)</span>
                 </div>
               </div>
-               <p><h4>Air Force</h4></p>
+               <p><h4>Unemployeed</h4></p>
               <div class="progress active">
                 <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                   <span class="sr-only">40% Complete (success)</span>
                 </div>
               </div>
-               <p><h4>Navy</h4></p>
+               <p><h4>Fresh Graduates</h4></p>
               <div class="progress active">
                 <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
                   <span class="sr-only">40% Complete (success)</span>
@@ -244,18 +252,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="col-md-6">
           <div class="box box-solid">
             <div class="box-header with-border">
-              <h2 class="box-title"><b>Civilians Statistics</b></h2>
+              <h2 class="box-title"><b>Organization Statistics</b></h2>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <p><h4>Senior Employees</h4></p>
+              <p><h4>Government Sectors Employeers</h4></p>
 
               <div class="progress active">
                 <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
                   <span class="sr-only">40% Complete (success)</span>
                 </div>
               </div>
-               <p><h4>Junior Employees</b></h4></p>
+               <p><h4>Private Sector Employeers</b></h4></p>
               <div class="progress active">
                 <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                   <span class="sr-only">40% Complete (success)</span>

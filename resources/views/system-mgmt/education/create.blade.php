@@ -1,4 +1,4 @@
-@extends('system-mgmt.credit.base')
+@extends('system-mgmt.education.base')
 
 @section('action-content')
 <div class="container">
@@ -7,9 +7,9 @@
 
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Credit Account</div>
+                <div class="panel-heading">Educational  Detail</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('credit.store') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('education.store') }}">
                     
                         {{ csrf_field() }}
                         <div class="form-group {{ $errors->has('employee_id') ? ' has-error' : '' }}">
