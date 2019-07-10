@@ -24,6 +24,7 @@ class CreateGraduateTable extends Migration
             $table->string('city', 120);
             $table->string('phone', 120);
             $table->string('email', 120);
+            $table->string('current_status', 120);
             $table->char('zip', 10);
             $table->integer('age')->unsigned();
             $table->date('birthdate');

@@ -1,4 +1,4 @@
-@extends('system-mgmt.division.base')
+@extends('system-mgmt.course.base')
 
 @section('action-content')
 <div class="container">
@@ -23,13 +23,13 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Update
-                                </button>
-                            </div>
-                        </div>
+            <div class="col-xs-12">
+          <a href="{{ url('system-management/schools') }}" target="" class="btn btn-default"><i class="fa fa-close"></i>Cancel</a>
+          <button type="submit" class="btn btn-primary pull-right"><i class="fa fa-paper-plane"></i> Submit
+          </button>
+         
+        </div>
+      </div>
                     </form>
                 </div>
             </div>

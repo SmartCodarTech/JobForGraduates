@@ -71,13 +71,21 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <!--div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Update
                                 </button>
                             </div>
-                        </div>
+                        </div-->
+        <div class="row no-print">
+        <div class="col-xs-12">
+          <a href="{{ route('user-management.index') }}" target="" class="btn btn-default"><i class="fa fa-close"></i>Cancel</a>
+          <button type="submit" class="btn btn-primary pull-right"><i class="fa fa-paper-plane"></i> Update
+          </button>
+         
+        </div>
+      </div>
                     </form>
                 </div>
             </div>

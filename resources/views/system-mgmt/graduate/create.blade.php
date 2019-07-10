@@ -50,13 +50,14 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Create
-                                </button>
-                            </div>
-                        </div>
+                        <div class="row no-print">
+        <div class="col-xs-12">
+          <a href="{{ url('graduate-management') }}" target="" class="btn btn-default"><i class="fa fa-close"></i>Cancel</a>
+          <button type="submit" class="btn btn-primary pull-right"><i class="fa fa-paper-plane"></i> Submit
+          </button>
+         
+        </div>
+      </div>
                     </form>
                 </div>
             </div>

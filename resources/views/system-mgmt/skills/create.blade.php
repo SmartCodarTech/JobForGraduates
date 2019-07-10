@@ -1,4 +1,4 @@
-@extends('system-mgmt.deduction.base')
+@extends('system-mgmt.skills.base')
 
 @section('action-content')
 <div class="container">
@@ -7,24 +7,73 @@
 
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Debit Account</div>
+                <div class="panel-heading">Job Experience and Skills</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('deduction.store') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('skills.store') }}">
                     
                         {{ csrf_field() }}
-                        <div class="form-group {{ $errors->has('civilian_id') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Full Name</label>
+                        <div class="form-group {{ $errors->has('personal_skill') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Personal Skills</label>
                             <div class="col-md-6">
-                                <select class="form-control select2" multiple="multiple" data-placeholder="Select Single or Multiples" name="civilian_id"  style="width: 100%;">
+                                <select class="form-control select2" multiple="multiple" data-placeholder="Select Single or Multiples" name="personal_skill"  style="width: 100%;">
                                    
-                                    @foreach ($civilian as $civilian)
+                                   
 
-                                        <option value="{{$civilian->id}}">{{$civilian->firstname}} {{$civilian->lastname}}</option>
-                                    @endforeach
+                                        <option value="Communication">Communication</option>
+                                        <option value="Ability to Work Under Pressure">Ability to Work Under Pressure</option>
+                                        <option value="Decision Making.">Decision Making.</option>
+                                         <option value="Time Management.">Time Management.</option>
+                                         <option value="Self-motivation.">Self-motivation.</option>
+                                         <option value="Conflict Resolution.">Conflict Resolution.</option>
+                                        <option value="Leadership.">Leadership.</option>
+                                         <option value="Adaptability.">Adaptability.</option>
+                                          <option value="Teamwork.">Teamwork.</option>
+                                           <option value="Creativity.">Creativity.</option>
+
+
+
+
+                                    
                                 </select>
-                                 @if ($errors->has('civilian_id'))
+                                 @if ($errors->has('personal_skill'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('civilian_id') }}</strong>
+                                        <strong>{{ $errors->first('personal_skill') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group {{ $errors->has('job_skill') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Personal Skills</label>
+                            <div class="col-md-6">
+                                <select class="form-control select2" multiple="multiple" data-placeholder="Select Single or Multiples" name="job_skill"  style="width: 100%;">
+                                   
+                                   
+
+                                        <option value="Listening">Listening</option>
+                                        <option value="Negotiation">Negotiation</option>
+                                        <option value="Nonverbal communication">Nonverbal communication</option>
+                                         <option value="Persuasion">Persuasion</option>
+                                         <option value="Presentation">Presentation</option>
+                                         <option value="Public speaking">Public speaking</option>
+                                        <option value="Reading body language">Reading body language</option>
+                                         <option value="Storytelling">Storytelling</option>
+                                          <option value="Verbal communication.">Verbal communication</option>
+                                           <option value="Visual communication">Visual communication</option>
+                                           <option value="Writing reports and proposals">Writing reports and proposals</option>
+                                           <option value="Writing skills">Writing skills</option>
+                                            <option value="Tolerance of change and uncertainty">Tolerance of change and uncertainty</option>
+                                            <option value="Willingness to learn">Willingness to learn</option>
+                                             <option value="Networking">Networking </option>
+
+
+
+
+
+                                    
+                                </select>
+                                 @if ($errors->has('personal_skill'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('personal_skill') }}</strong>
                                     </span>
                                 @endif
                             </div>

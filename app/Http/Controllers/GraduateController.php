@@ -63,7 +63,7 @@ class GraduateController extends Controller
         $this->validateInput($request);
         // Upload image
         $path = $request->file('picture')->store('avatars');
-        $keys = ['lastname', 'firstname','middlename', 'address','country','city','phone','email','zip','age','birthdate', 'gender',
+        $keys = ['lastname', 'firstname','middlename', 'address','country','city','phone','email','current_status','zip','age','birthdate', 'gender',
         'user_id'];
         $input = $this->createQueryInput($keys, $request);
         $input['picture'] = $path;
@@ -115,7 +115,7 @@ class GraduateController extends Controller
         $graduates = Graduates::findOrFail($id);
         $this->validateInput($request);
         // Upload image
-     $keys = ['lastname', 'firstname','middlename', 'address','country','city','phone','email','zip','age','birthdate', 'gender',
+     $keys = ['lastname', 'firstname','middlename', 'address','country','city','phone','email','current_status','zip','age','birthdate', 'gender',
         'user_id'];
         $input = $this->createQueryInput($keys, $request);
         if ($request->file('picture')) {
@@ -198,6 +198,7 @@ class GraduateController extends Controller
             'city' => 'required|max:60',
             'phone' => 'required|max:60',
             'email' => 'required|max:60',
+             'current_status' => 'required|max:60',
             'zip' => 'required',
             'age'=>'required',
             'birthdate'=>'required',
